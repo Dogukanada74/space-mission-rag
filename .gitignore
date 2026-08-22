@@ -1,0 +1,8 @@
+.env
+data/chroma_db/
+data/mission_audio_small.mp4
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+data/mission_audio.mp4
+data/*.mp4

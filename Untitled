@@ -1,0 +1,12 @@
+openai
+huggingface_hub
+torch
+transformers
+gradio
+python-dotenv
+tqdm
+litellm
+numpy
+chromadb
+pydantic
+imageio-ffmpeg

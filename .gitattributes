@@ -1,0 +1,2 @@
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+data/mission_audio_small.mp4 filter=lfs diff=lfs merge=lfs -text
