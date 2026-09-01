@@ -1,6 +1,5 @@
 import os
 import json
-from IPython.display import Audio, display, update_display
 from openai import OpenAI
 from huggingface_hub import login
 import torch
@@ -49,7 +48,6 @@ pipe = pipeline(
     return_timestamps=True
 )
 
-# 🛠️ Whisper Step (Skipped if transcript exists)
 if not file_path.exists():
     print("🎙️ Audio file is being transcribed...")
     try:
@@ -258,7 +256,6 @@ def gradio_chat(message, history):
     answer, _ = answer_question(message, formatted_history)
     return answer
 
-# ⚖️ Advanced Tri-Reliability Judge Function
 def run_custom_evaluation():
     print("\n🚀 Custom Eval System Initializing...")
     
@@ -315,9 +312,7 @@ Rationale: [A short 1-2 sentence explanation summarizing all these scores]
     print("✅ All Tests Completed and Reported!\n")
 
 if __name__ == "__main__":
-    # If you want, you can run the test first and see the scores in the console:
     run_custom_evaluation()
     
-    # Then you can launch the interface:
     print("🚀 Gradio Chatbot Interface Initializing...")
     gr.ChatInterface(fn=gradio_chat).launch(server_name="0.0.0.0", server_port=10000)
