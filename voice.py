@@ -320,4 +320,4 @@ if __name__ == "__main__":
     
     # Then you can launch the interface:
     print("🚀 Gradio Chatbot Interface Initializing...")
-    gr.ChatInterface(fn=gradio_chat).launch(inbrowser=True)
+    gr.ChatInterface(fn=gradio_chat).launch(server_name="0.0.0.0", server_port=10000)
